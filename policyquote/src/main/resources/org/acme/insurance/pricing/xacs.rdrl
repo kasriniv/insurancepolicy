@@ -1,0 +1,9 @@
+package org.acme.insurance.pricing;
+
+import java.lang.Number;
+
+rule "xacs"
+	dialect "mvel"
+	when
+	then
+end
