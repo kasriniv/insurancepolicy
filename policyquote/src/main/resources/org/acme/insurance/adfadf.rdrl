@@ -1,0 +1,9 @@
+package org.acme.insurance;
+
+import java.lang.Number;
+
+rule "adfadf"
+	dialect "mvel"
+	when
+	then
+end
