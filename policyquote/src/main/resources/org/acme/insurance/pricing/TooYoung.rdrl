@@ -1,9 +1,0 @@
-package org.acme.insurance.pricing;
-
-import java.lang.Number;
-
-rule "TooYoung"
-	dialect "mvel"
-	when
-	then
-end
