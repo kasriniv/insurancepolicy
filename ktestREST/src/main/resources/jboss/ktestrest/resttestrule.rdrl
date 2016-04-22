@@ -5,9 +5,9 @@ import java.lang.Number;
 rule "resttestrule"
 	dialect "mvel"
 	when
-		RestDO( col1 in ( "Hello", "Hi" ) )
+		$restdo : RestDO( $col1 : col1 in ( "Hello", "Hi" ) )
 	then
-		RestDO fact0 = new RestDO();
-		fact0.setCol3( "You are so sweet" );
-		insert( fact0 );
+		modify( $restdo ) {
+				setCol3( "REST call works" )
+		}
 end
