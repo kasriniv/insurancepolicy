@@ -15,20 +15,27 @@
       <name>restdo</name>
       <isModify>false</isModify>
     </fact-data>
-    <execution-trace/>
+    <execution-trace>
+      <executionTimeResult>537</executionTimeResult>
+      <numberOfRulesFired>100000</numberOfRulesFired>
+    </execution-trace>
     <expect-fact>
       <fieldValues>
         <expect-field>
           <fieldName>col3</fieldName>
           <expected>REST rocks</expected>
+          <actualResult>REST call works</actualResult>
+          <successResult>false</successResult>
+          <explanation>[RestDO] field [col3] was [REST call works] expected [REST rocks].</explanation>
           <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
       <name>RestDO</name>
       <anonymous>true</anonymous>
     </expect-fact>
   </fixtures>
+  <lastRunResult>2016-04-22 18:15:34.529 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>jboss.ktestrest</packageName>
