@@ -10,7 +10,7 @@ public class Policy implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    @org.kie.api.definition.type.Label(value = "Driver")
-   private org.acme.insurance.Driver driver;
+   private org.acme.insurance.policy.Driver driver;
    @org.kie.api.definition.type.Label(value = "Policy Type")
    private java.lang.String policyType;
    @org.kie.api.definition.type.Label(value = "Price")
@@ -26,7 +26,7 @@ public class Policy implements java.io.Serializable
    {
    }
 
-   public org.acme.insurance.Driver getDriver()
+   public org.acme.insurance.policy.Driver getDriver()
    {
       return this.driver;
    }
@@ -86,7 +86,7 @@ public class Policy implements java.io.Serializable
       this.vehicleYear = vehicleYear;
    }
 
-   public Policy(org.acme.insurance.Driver driver,
+   public Policy(org.acme.insurance.policy.Driver driver,
          java.lang.String policyType, java.lang.Integer price,
          java.lang.Integer priceDiscount, java.util.Date requestDate,
          java.lang.Integer vehicleYear)
