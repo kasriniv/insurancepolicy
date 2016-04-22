@@ -1,0 +1,9 @@
+package jboss.ktestrest;
+
+import java.lang.Number;
+
+rule "resttestrule"
+	dialect "mvel"
+	when
+	then
+end
