@@ -1,0 +1,9 @@
+package org.acme.insurance.pricing;
+
+import java.lang.Number;
+
+rule "sfg"
+	dialect "mvel"
+	when
+	then
+end
