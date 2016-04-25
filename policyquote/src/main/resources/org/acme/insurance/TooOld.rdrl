@@ -11,6 +11,6 @@ rule "TooOld"
 		Driver( age > 100 )
 	then
 		Rejection fact0 = new Rejection();
-		fact0.setReason( "TooOld" );
+		fact0.setReason( "Too Old" );
 		insert( fact0 );
 end
