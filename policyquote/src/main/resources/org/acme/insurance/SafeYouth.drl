@@ -1,2 +1,15 @@
 package org.acme.insurance;
 
+import org.acme.insurance.policyquote.Driver
+import org.acme.insurance.policyquote.Policy
+rule "SafeYouth"
+no-loop true
+lock-on-active true
+ruleflow-group "calculation"
+    when
+        driver : Driver(age >= 18 && < 25, numOfAccidents< 1, numberOfTickets <= 1)
+        policy : Policy(price == null, policyType == "AUTO")
+    then
+        modify(policy) {setPrice(450)};
+        System.out.println("fired rule " + kcontext.getRule().getName());
+end
