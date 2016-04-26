@@ -4,6 +4,9 @@ import java.lang.Number;
 
 rule "RetractPolicy"
 	dialect "mvel"
+	ruleflow-group "retract"
 	when
+		There is a Policy
 	then
+		>System.out.println("Retracting policy: " + policy.getPrice()); retract(policy);
 end
