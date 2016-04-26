@@ -4,6 +4,9 @@ import java.lang.Number;
 
 rule "RetractDriver"
 	dialect "mvel"
+	ruleflow-group "retract"
 	when
+		There is a Driver
 	then
+		>System.out.println("Retracting Driver " + driver.getDriverName() + " - " + driver.getAge()); retract(driver);
 end
