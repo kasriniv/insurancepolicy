@@ -9,11 +9,11 @@ rule "AccidentSurcharge"
 	no-loop true
 	lock-on-active true
 	when
-		There is a Driver
-		- has had more than 2 number of accidents
 		There is a Policy
 		- price is greater than 0
 		- policy type is 'AUTO'
+		There is a Driver
+		- has had more than 2 number of accidents
 	then
 		Add surcharge 200 to Policy
 end
