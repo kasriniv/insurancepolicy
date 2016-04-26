@@ -1,3 +1,0 @@
-package org.acme.insurance;
-
-System.out.println("Retracting Driver " + driver.getDriverName() + " - " + driver.getAge()); retract(driver);
