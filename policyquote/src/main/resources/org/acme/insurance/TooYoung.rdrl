@@ -8,7 +8,7 @@ rule "TooYoung"
 	dialect "mvel"
 	ruleflow-group "rejection"
 	when
-		Driver( age == 18 )
+		Driver( age < 18 )
 	then
 		Rejection fact0 = new Rejection();
 		fact0.setReason( "Too Young" );
