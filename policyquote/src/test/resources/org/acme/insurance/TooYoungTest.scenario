@@ -1,13 +1,48 @@
 <scenario>
-  <name>TooYoungTest</name>
+  <name>TooYoungTest.scenario</name>
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
-  <fixtures/>
-  <rules/>
-  <inclusive>false</inclusive>
+  <fixtures>
+    <org.drools.workbench.models.testscenarios.shared.ActivateRuleFlowGroup>
+      <name>rejection</name>
+    </org.drools.workbench.models.testscenarios.shared.ActivateRuleFlowGroup>
+    <execution-trace>
+      <executionTimeResult>0</executionTimeResult>
+      <numberOfRulesFired>0</numberOfRulesFired>
+    </execution-trace>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>reason</fieldName>
+          <expected>Too Young</expected>
+          <actualResult>No match</actualResult>
+          <successResult>false</successResult>
+          <explanation>Fact of type [Rejection] was not found in the results.</explanation>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+      </fieldValues>
+      <name>Rejection</name>
+      <anonymous>true</anonymous>
+    </expect-fact>
+  </fixtures>
+  <lastRunResult>2016-04-26 00:58:36.529 UTC</lastRunResult>
+  <rules>
+    <string>TooYoung</string>
+  </rules>
+  <inclusive>true</inclusive>
   <packageName>org.acme.insurance</packageName>
   <imports>
-    <imports/>
+    <imports>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>org.acme.insurance.policyquote.Driver</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>org.acme.insurance.policyquote.Rejection</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+    </imports>
   </imports>
-  <ksessions/>
+  <ksessions>
+    <string>defaultKieSession</string>
+  </ksessions>
 </scenario>
