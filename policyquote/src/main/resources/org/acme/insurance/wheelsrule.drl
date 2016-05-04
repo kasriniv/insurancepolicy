@@ -1,2 +1,9 @@
 package org.acme.insurance;
 
+rule "count Wheels"
+dialect "mvel"
+    when
+        Car( $numWheels : getWheels())
+    then
+        System.out.println("Num Wheels: "+ $numWheels);
+end
