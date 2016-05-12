@@ -1,2 +1,12 @@
 package org.acme.insurance;
 
+
+declare ApplicationEvent
+@role( event )
+@timestamp( applicationdate )
+end
+
+declare QuoteEvent
+@role( event ) 
+@timestamp( quotedate )
+end
