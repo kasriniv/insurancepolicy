@@ -5,5 +5,10 @@ import java.lang.Number;
 rule "CEP Rule"
 	dialect "mvel"
 	when
+		>quoteEvent : QuoteEvent( ) from entry-point "QuoteEventStream"
+		>not (applicationevent : ApplicationEvent( this == quoteEvent )) 
 	then
+		>Notification fact0 = new Notification();
+		>fact0.setEmailid( "kasriniv@gmail.com" );
+		>insert( fact0 );
 end
