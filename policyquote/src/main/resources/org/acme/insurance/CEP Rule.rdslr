@@ -6,6 +6,7 @@ rule "CEP Rule"
 	dialect "mvel"
 	when
 		>quoteEvent : QuoteEvent( ) from entry-point "QuoteEventStream"
+		>not (ApplicationEvent( this after quoteEvent )) 
 	then
 		>Notification fact0 = new Notification();
 		>fact0.setEmailid( "kasriniv@gmail.com" );
