@@ -10,8 +10,66 @@ public class QuoteEvent implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
+   @org.kie.api.definition.type.Label(value = "Quote Date")
+   private java.util.Date quotedate;
+   @org.kie.api.definition.type.Label(value = "Quote ID")
+   private java.lang.Integer quoteid;
+   @org.kie.api.definition.type.Label(value = "Premium")
+   private java.math.BigDecimal premium;
+   @org.kie.api.definition.type.Label(value = "Insured Name")
+   private java.lang.String insuredname;
+
    public QuoteEvent()
    {
+   }
+
+   public java.util.Date getQuotedate()
+   {
+      return this.quotedate;
+   }
+
+   public void setQuotedate(java.util.Date quotedate)
+   {
+      this.quotedate = quotedate;
+   }
+
+   public java.lang.Integer getQuoteid()
+   {
+      return this.quoteid;
+   }
+
+   public void setQuoteid(java.lang.Integer quoteid)
+   {
+      this.quoteid = quoteid;
+   }
+
+   public java.math.BigDecimal getPremium()
+   {
+      return this.premium;
+   }
+
+   public void setPremium(java.math.BigDecimal premium)
+   {
+      this.premium = premium;
+   }
+
+   public java.lang.String getInsuredname()
+   {
+      return this.insuredname;
+   }
+
+   public void setInsuredname(java.lang.String insuredname)
+   {
+      this.insuredname = insuredname;
+   }
+
+   public QuoteEvent(java.util.Date quotedate, java.lang.Integer quoteid,
+         java.math.BigDecimal premium, java.lang.String insuredname)
+   {
+      this.quotedate = quotedate;
+      this.quoteid = quoteid;
+      this.premium = premium;
+      this.insuredname = insuredname;
    }
 
 }
