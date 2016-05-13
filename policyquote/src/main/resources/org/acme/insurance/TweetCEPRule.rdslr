@@ -5,5 +5,11 @@ import java.lang.Number;
 rule "TweetCEPRule"
 	dialect "mvel"
 	when
+		>tweetevent : TweetEvent( ) from entry-point "TweetStream"
+		>not (complaintevent : ComplaintEvent( this after tweetevent )) 
 	then
+		>Notification fact0 = new Notification();
+		>fact0.setEmailid( "kasriniv@gmail.com" );
+		>insert( fact0 );
+		>System.out.println("Tweet CEP Rule fired");
 end
