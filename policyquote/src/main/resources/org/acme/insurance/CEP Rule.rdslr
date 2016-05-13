@@ -11,4 +11,5 @@ rule "CEP Rule"
 		>Notification fact0 = new Notification();
 		>fact0.setEmailid( "kasriniv@gmail.com" );
 		>insert( fact0 );
+		>System.out.println("printing from CEP rule");
 end
