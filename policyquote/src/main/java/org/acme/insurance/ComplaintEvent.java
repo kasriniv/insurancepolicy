@@ -17,6 +17,9 @@ public class ComplaintEvent implements java.io.Serializable
    @org.kie.api.definition.type.Label("Complaint Text ")
    private java.lang.String complainttext;
 
+   @org.kie.api.definition.type.Label(value = "Date of Complaint")
+   private java.util.Date complaintdate;
+
    public ComplaintEvent()
    {
    }
@@ -51,12 +54,23 @@ public class ComplaintEvent implements java.io.Serializable
       this.complainttext = complainttext;
    }
 
+   public java.util.Date getComplaintdate()
+   {
+      return this.complaintdate;
+   }
+
+   public void setComplaintdate(java.util.Date complaintdate)
+   {
+      this.complaintdate = complaintdate;
+   }
+
    public ComplaintEvent(java.lang.String fromuser, java.lang.String about,
-         java.lang.String complainttext)
+         java.lang.String complainttext, java.util.Date complaintdate)
    {
       this.fromuser = fromuser;
       this.about = about;
       this.complainttext = complainttext;
+      this.complaintdate = complaintdate;
    }
 
 }
