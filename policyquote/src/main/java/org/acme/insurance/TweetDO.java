@@ -5,19 +5,19 @@ package org.acme.insurance;
  */
 
 @org.kie.api.definition.type.Role(org.kie.api.definition.type.Role.Type.EVENT)
-public class TweetDO implements java.io.Serializable
+public class TweetEvent implements java.io.Serializable
 {
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "User Who Tweeted")
+   @org.kie.api.definition.type.Label("User Who Tweeted")
    private java.lang.String user;
-   @org.kie.api.definition.type.Label(value = "Screen name")
+   @org.kie.api.definition.type.Label("Screen name")
    private java.lang.String screename;
-   @org.kie.api.definition.type.Label(value = "Tweet Content")
+   @org.kie.api.definition.type.Label("Tweet Content")
    private java.lang.String tweet;
 
-   public TweetDO()
+   public TweetEvent()
    {
    }
 
@@ -51,7 +51,7 @@ public class TweetDO implements java.io.Serializable
       this.tweet = tweet;
    }
 
-   public TweetDO(java.lang.String user, java.lang.String screename,
+   public TweetEvent(java.lang.String user, java.lang.String screename,
          java.lang.String tweet)
    {
       this.user = user;
