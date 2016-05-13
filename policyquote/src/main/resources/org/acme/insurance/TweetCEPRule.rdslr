@@ -5,7 +5,7 @@ import java.lang.Number;
 rule "TweetCEPRule"
 	dialect "mvel"
 	when
-		>tweetevent : TweetEvent( user == "twitskept" ) from entry-point "TweetStream"
+		>tweetevent : TweetEvent( user != "twitskept" ) from entry-point "TweetStream"
 		>not (complaintevent : ComplaintEvent( this after tweetevent )) 
 	then
 		>Notification fact0 = new Notification();
