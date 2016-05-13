@@ -1,2 +1,14 @@
 package org.acme.insurance;
 
+
+
+
+declare ComplaintEvent
+@role( event )
+@timestamp( complaintdate )
+end
+
+declare TweetEvent
+@role( event ) 
+@timestamp( tweetdate )
+end
