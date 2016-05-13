@@ -17,6 +17,9 @@ public class TweetEvent implements java.io.Serializable
    @org.kie.api.definition.type.Label("Tweet Content")
    private java.lang.String tweet;
 
+   @org.kie.api.definition.type.Label(value = "Date of Tweet")
+   private java.util.Date tweetdate;
+
    public TweetEvent()
    {
    }
@@ -51,12 +54,23 @@ public class TweetEvent implements java.io.Serializable
       this.tweet = tweet;
    }
 
+   public java.util.Date getTweetdate()
+   {
+      return this.tweetdate;
+   }
+
+   public void setTweetdate(java.util.Date tweetdate)
+   {
+      this.tweetdate = tweetdate;
+   }
+
    public TweetEvent(java.lang.String user, java.lang.String screename,
-         java.lang.String tweet)
+         java.lang.String tweet, java.util.Date tweetdate)
    {
       this.user = user;
       this.screename = screename;
       this.tweet = tweet;
+      this.tweetdate = tweetdate;
    }
 
 }
