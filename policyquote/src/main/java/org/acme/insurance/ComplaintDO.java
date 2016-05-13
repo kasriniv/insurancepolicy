@@ -5,19 +5,19 @@ package org.acme.insurance;
  */
 
 @org.kie.api.definition.type.Role(org.kie.api.definition.type.Role.Type.EVENT)
-public class ComplaintDO implements java.io.Serializable
+public class ComplaintEvent implements java.io.Serializable
 {
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "Complaint From User")
+   @org.kie.api.definition.type.Label("Complaint From User")
    private java.lang.String fromuser;
-   @org.kie.api.definition.type.Label(value = "Complaint category")
+   @org.kie.api.definition.type.Label("Complaint category")
    private java.lang.String about;
-   @org.kie.api.definition.type.Label(value = "Complaint Text ")
+   @org.kie.api.definition.type.Label("Complaint Text ")
    private java.lang.String complainttext;
 
-   public ComplaintDO()
+   public ComplaintEvent()
    {
    }
 
@@ -51,7 +51,7 @@ public class ComplaintDO implements java.io.Serializable
       this.complainttext = complainttext;
    }
 
-   public ComplaintDO(java.lang.String fromuser, java.lang.String about,
+   public ComplaintEvent(java.lang.String fromuser, java.lang.String about,
          java.lang.String complainttext)
    {
       this.fromuser = fromuser;
