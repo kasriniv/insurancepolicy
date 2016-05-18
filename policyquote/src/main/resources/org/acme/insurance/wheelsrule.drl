@@ -6,5 +6,5 @@ dialect "mvel"
     when
         Car( $numWheels : getWheels())
     then
-        System.out.println("Num Wheels: "+ $numWheels);
+        System.out.println("The number of wheels sent : "+ $numWheels);
 end
