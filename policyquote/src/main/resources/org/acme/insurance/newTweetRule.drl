@@ -14,4 +14,6 @@ rule "NewTweetCEPRule"
 		fact0.setEmailid( "kasriniv@gmail.com" );
 		insert( fact0 );
 		System.out.println("New Tweet CEP Rule fired");
+		System.out.println("from BC");
+		
 end
