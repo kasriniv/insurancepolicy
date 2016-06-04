@@ -15,5 +15,6 @@ rule "NewTweetCEPRule"
 		insert( fact0 );
 		System.out.println("New Tweet CEP Rule fired");
 		System.out.println("from BC");
+			channels["outcomes"].send("ktestfromnewtweetceprule");
 		
 end
