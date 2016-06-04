@@ -8,7 +8,8 @@ public class Mycallout implements Channel  {
 	
 	@Override
     public void send(Object object) {
-        System.out.println("=============================>kavithatestfromcallout" + object);
+        System.out.println("=============================>kavithatestfromcallout" );
+        System.out.println(object.toString());
     }
 
 }
