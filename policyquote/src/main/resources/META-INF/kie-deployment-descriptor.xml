@@ -30,7 +30,7 @@
         </work-item-handler>
         <work-item-handler>
             <resolver>enter resolver type</resolver>
-            <identifier>new org.jbpm.process.instance.impl.demo.SystemOutWorkItemHandler()</identifier>
+            <identifier>new org.jbpm.process.workitem.email.EmailWorkItemHandler("smtp.gmail.com", "465", "kasriniv@gmail.com", "My_shaangi55")</identifier>
             <parameters/>
             <name>Email</name>
         </work-item-handler>
