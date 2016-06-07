@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.acme.insurance</groupId>
   <artifactId>policyquote</artifactId>
-  <version>7.1</version>
+  <version>7.2</version>
   <name>policyquote</name>
   <build>
     <plugins>
